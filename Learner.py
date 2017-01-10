@@ -9,7 +9,7 @@ def init_vars(game):
     states = []
     Q = {}
 
-    # append all 
+    # Create base for Q-matrix
     for i in range(game.AXIS_X):
         for j in range(game.AXIS_Y):
             states.append((i, j))
@@ -20,7 +20,7 @@ def init_vars(game):
             temp[action] = 0.1
         Q[state] = temp
 
-    for (i, j, c, w) in game.SPECIALS:
+    for (i, j, c, w) in game.OBJECTS:
         for action in [item[0] for item in actions]:
             Q[(i, j)][action] = w
 
@@ -31,8 +31,8 @@ def do_action(action, game, actions):
     r = -game.score
     coords = [i for i in actions if i[0] == action]
 
-    AXIS_X, AXIS_Y = coords[0][1:]
-    game.try_move(AXIS_X, AXIS_Y)
+    x, y = coords[0][1:]
+    game.try_move(x, y)
 
     s2 = game.Player
     r += game.score
@@ -62,7 +62,7 @@ def run(discount, game, Q, actions):
     time.sleep(1)
     alpha = 1
     t = 1
-    while True:       
+    while True:   
         # Pick the right action
         s = game.Player
         max_act, max_val = max_Q(s, Q)
@@ -83,7 +83,7 @@ def run(discount, game, Q, actions):
         alpha = pow(t, -0.1)
 
         # MODIFAXIS_y THIS SLEEP IF THE GAME IS GOING TOO FAST.
-        time.sleep(0.1)
+        time.sleep(0.3)
 
         # render game
         render_game(game)
