@@ -1,7 +1,6 @@
 Introduction
 ==========================
-The challenge was to build a Q-learning algorithm by using existing code (which I referenced in the credits). By looking
-at improvements you can see which improvements I made.
+The challenge was to build a Q-learning algorithm by using existing code (which I referenced in the credits). The header mprovements describes which improvements I made.
 
 Run
 ==========================
