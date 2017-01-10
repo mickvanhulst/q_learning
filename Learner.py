@@ -92,7 +92,7 @@ def run(discount, game, Q, actions):
 
 def main(): 
     # Init game -- input: width, x_axis & y_axis
-    game = World(100, 10, 10)
+    game = World(100, 5, 5)
     
     # Init vars
     discount, actions, Q = init_vars(game)
@@ -103,6 +103,5 @@ def main():
     t.start()
     game.start_game()
     
-
 if __name__ == '__main__':
     main() 

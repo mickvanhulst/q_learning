@@ -16,7 +16,7 @@ The challenge was to improve the original [code](https://github.com/llSourcell/q
 by changing the following:
 - Replace unnececary functions/code.
 - Optimize by using list comprehension (loads of for loops were used, while this wasn't neccecary in all cases)
-- Use of classes (the game world is now a class, which in my opinion is a cleaner way of coding)
+- Use of classes ('World' is now a class, which in my opinion is a cleaner way of coding)
 - Merged walls/specials to objects variable.
 - Walls give negative result of -100 to discourage the player to ever go there.
 - After every reset the player position is changed so that the Q-matrix get initialized quicker. This way we have a higher chance that every cell is touched.
