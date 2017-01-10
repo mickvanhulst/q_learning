@@ -20,4 +20,20 @@ by changing the following:
 - Merged walls/specials to objects variable.
 - Walls give negative result of -100 to discourage the player to ever go there.
 - After every reset the player position is changed so that the Q-matrix get initialized quicker. This way we have a higher chance that every cell is touched.
+- Extra function so that player/green square is not initialized on an already exisiting object position
 - Dynamic generation of matrix (user can give in his/her own dimensions).
+
+# Things that crossed my mind and why I didn't do them
+I thought about generating a random matrix everytime the game restarts. However this wouldn't make much sense,
+since you're trying to find the optimal path and by changing the matrix, the optimal path would change.
+
+# Example
+Below is an example of a randomly generated matrix (10x10). This is however not the max. The user can give in any
+value he/she wants.
+![sample_grid_q_learning](https://github.com/mickvanhulst/q_learning/blob/master/example_grid.jpg)
+
+Credits
+===========
+Credit for the vast majority of code here goes to [PhilippeMorere](https://github.com/PhilippeMorere). 
+
+Credits for being awesome go to @[Sirajology](https://www.youtube.com/sirajology) for enabling us to learn so much about ML!

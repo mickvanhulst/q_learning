@@ -53,10 +53,12 @@ def inc_Q(s, a, alpha, inc, Q):
 def render_game(game):
     game.render_grid()
     game.board.grid(row=0, column=0)
-
-    game.me = game.board.create_rectangle(game.Player[0]*game.WIDTH+game.WIDTH*2/10, game.Player[1]*game.WIDTH+game.WIDTH*2/10,
-        game.Player[0]*game.WIDTH+game.WIDTH*8/10, game.Player[1]*game.WIDTH+game.WIDTH*8/10, fill="orange", width=1, tag="me")
-
+    base_1 = game.WIDTH+(game.WIDTH*0.2)
+    base_2 = game.WIDTH+(game.WIDTH*0.8)
+    
+    game.me = game.board.create_rectangle(game.Player[0]*base_1, game.Player[1]*base_2,
+        game.Player[0]*base_1, game.Player[1]*base_2, 
+        fill="orange", width=1, tag="me")
 
 def run(discount, game, Q, actions):
     time.sleep(1)
