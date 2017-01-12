@@ -9,7 +9,7 @@ Run  'Python3 Learner.py'
 Improvements
 ==========================
 I improved the code by changing the following:
-- Replace unnececary functions/code.
+- Replace unnececary functions/code (LOTS of code cleaning).
 - Optimize by using list comprehension (loads of for loops were used, while this wasn't neccecary in all cases)
 - Use of classes ('World' is now a class, which in my opinion is a cleaner way of coding)
 - Merged walls/specials to objects variable.
