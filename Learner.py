@@ -1,5 +1,6 @@
 from World import World
 import threading
+import time
 
 def init_vars(game):
     discount = 0.3
