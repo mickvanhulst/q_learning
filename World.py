@@ -9,7 +9,7 @@ class World(object):
         (self.AXIS_X, self.AXIS_Y) = (axis_x, axis_y)
         self.WALK_REWARD = -0.04
         self.ACTIONS = [["up", 0, -1], ["down", 0, 1], ["left", -1, 0], ["right", 1, 0]]
-        self.N_OBJECTS = round((axis_x * axis_y) / 5)
+        self.N_OBJECTS = round((axis_x * axis_y) / 4)
 
         # Init objects, then add special green square
         self.OBJECTS = self.init_objects(axis_x, axis_y)
@@ -25,7 +25,6 @@ class World(object):
             self.Player[0]*self.WIDTH+self.WIDTH*8/10, self.Player[1]*self.WIDTH+self.WIDTH*8/10, fill="orange", width=1, tag="me")
 
     def init_objects(self, axis_x, axis_y):
-        #walls = set([])
         objects = set([])
         n_of_red_squares = round(self.N_OBJECTS / 5)
         
